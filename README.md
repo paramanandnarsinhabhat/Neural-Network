@@ -1,72 +1,65 @@
+# Neural Network with RMSProp Optimization
+This repository contains an implementation of a simple neural network in Python that uses RMSProp optimization. The neural network is built using NumPy for matrix operations and Matplotlib for visualizing the training process.
+## Project Structure
+- `notebook/`: A directory containing the Jupyter notebook with the implementation.
+  - `neuralnetwork.ipynb`: The Jupyter notebook that contains the neural network code and visualizations.
+- `source/`: A directory containing the source code in Python.
+  - `neural.py`: The Python script with the neural network implementation.
+- `myenv/`: A directory that may contain a virtual environment for the project.
+- `.gitignore`: Configuration file for Git to ignore files that should not be committed.
+- `LICENSE`: The license document for the project.
+- `README.md`: This file, which provides an overview and instructions for the project.
+- `requirements.txt`: A file listing all the Python dependencies required to run the project.
+## Getting Started
+To run this project, you will need to install its dependencies.
+### Prerequisites
+Ensure you have the following installed:
 
-# Simple Neural Network in NumPy
+- Python 3.x
+- pip (Python package manager)
+### Installation
+To install the required Python packages, run the following command in your terminal:
 
-This repository contains a Python implementation of a simple neural network using NumPy, designed to illustrate the basics of neural network architecture, forward and backward propagation, and the training process.
-
-## Repository Structure
-
-- `notebook/`: Contains Jupyter notebooks with detailed explanations and step-by-step code execution.
-  - `neuralnetwork.ipynb`: Jupyter notebook illustrating the neural network implementation.
-- `source/`: Contains the source code for the neural network.
-  - `neural.py`: Core script with the neural network implementation.
-- `myenv/`: The directory that could contain a virtual environment or configurations specific to this project.
-- `.gitignore`: Defines what files and directories Git should ignore.
-- `LICENSE`: The license file specifying how the code can be used.
-- `README.md`: Provides an overview and instructions for the project.
-- `requirements.txt`: Lists all the dependencies needed to run the neural network.
-
-## Installation
-
-To set up the environment to run the neural network, you need to install the dependencies listed in `requirements.txt`.
-
-```bash
 pip install -r requirements.txt
-```
 
-This command will install the required versions of NumPy and Matplotlib.
+The `requirements.txt` file includes the following libraries:
 
-## Usage
+numpy
+matplotlib
 
-To run the neural network, navigate to the `source` directory and execute the `neural.py` script:
+## Running the Neural Network
 
-```bash
+Navigate to the `source` directory and run the `neural.py` script to execute the neural network:
+
 python neural.py
-```
 
-Alternatively, you can explore the `neuralnetwork.ipynb` notebook inside the `notebook` directory to interact with the code and learn more about the implementation details.
+You can also open and run the `neuralnetwork.ipynb` notebook within the `notebook` directory if you prefer an interactive environment provided by Jupyter.
 
-## Neural Network Implementation Steps
+## Understanding the Neural Network
 
-1. **Loading the Dataset**: The input (`X`) and output (`y`) data are loaded into the system.
+The neural network follows these steps:
 
-2. **Architecture Setup**: The neural network's structure is defined, including the number of neurons in the input, hidden, and output layers.
+1. **Importing Libraries**: Uses NumPy for numerical computations and Matplotlib for plotting.
+2. **Loading the Dataset**: Initializes the input (`X`) and output (`y`) data.
+3. **Defining the Sigmoid Function**: Utilizes the sigmoid function as the activation function.
+4. **Setting Hyperparameters**: Defines the learning rate, number of neurons in each layer, and number of epochs for training.
+5. **Initializing Weights**: Sets up initial weights for the input to hidden and hidden to output layers.
+6. **Training with RMSProp**: Implements the forward and backward propagation with RMSProp optimization during training.
+7. **Visualizing Results**: Plots the error over each epoch and the learning rate adjustments.
 
-3. **Weight Initialization**: Initial random weights are set for the connections between the layers.
+## Visualizations
 
-4. **Forward Propagation**: The network processes the input data and generates predictions.
+After training, the code generates two plots:
 
-5. **Backward Propagation**: The network adjusts its weights based on the error in its predictions.
+1. The error over each training epoch.
+2. The learning rates for the hidden and output layers over each epoch.
 
-6. **Training**: The process of forward and backward propagation is repeated for a number of epochs to train the model.
+These visualizations help in understanding the learning process and the effectiveness of the RMSProp optimization method.
 
-## Visualizing Training Progress
+## Contributing
 
-The training process can be visualized by plotting the error reduction over epochs, showing how the model improves its predictions over time.
-
-## Contributions
-
-Contributions to this project are welcome. You can help by:
-
-- Reporting any bugs you find.
-- Suggesting improvements or new features.
-- Sending pull requests with fixes or enhancements.
-
-Please ensure that your contributions adhere to the project's code of conduct.
+We welcome contributions to this project. If you have suggestions or improvements, feel free to make a pull request or open an issue.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
-
-## Contact
-
-For any queries or discussions regarding this project, please open an issue in the repository.
+This project is licensed under the MIT License - see the `LICENSE` file for details.
