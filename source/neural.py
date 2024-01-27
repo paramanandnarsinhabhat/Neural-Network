@@ -8,5 +8,7 @@
 <ol>6. Train the model for n epochs </ol>
 '''
 
+#1 Loading the dataset (Input and Output)
+
 
 
